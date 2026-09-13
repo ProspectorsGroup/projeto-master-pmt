@@ -65,7 +65,7 @@ function formatPhone(v){let d=normalizePhone(v);let m=d.match(/^55(\d{2})(\d{4,5
 function waData(){const phone=normalizePhone(localStorage.getItem(key('whatsapp'))||textOf(document.querySelector('[data-k="whatsappDisplay"]'))||DEF.whatsapp);const msg=localStorage.getItem(key('whatsappMessage'))||DEF.whatsappMessage;return {phone,msg}}
 function waUrl(){const {phone,msg}=waData();return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg)}
 function isMobile(){return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)}
-function waButtonUrl(){const {phone,msg}=waData();return isMobile()?('https://wa.me/'+phone+'?text='+encodeURIComponent(msg)):('whatsapp://send?phone='+encodeURIComponent(phone)+'&text='+encodeURIComponent(msg))}
+function waButtonUrl(){const {phone,msg}=waData();return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg)}
 function refreshContact(){
  const raw=localStorage.getItem(key('whatsapp'))||normalizePhone(textOf(document.querySelector('[data-k="whatsappDisplay"]')))||DEF.whatsapp;
  const url='https://wa.me/'+normalizePhone(raw)+'?text='+encodeURIComponent(localStorage.getItem(key('whatsappMessage'))||DEF.whatsappMessage);

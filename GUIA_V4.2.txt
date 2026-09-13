@@ -71,3 +71,6 @@ V4.2.25 — WhatsApp: no computador, o botão usa web.whatsapp.com/send com tele
 
 
 V4.2.26: botão WhatsApp no computador usa protocolo whatsapp:// para abrir diretamente o aplicativo instalado. QR Code continua usando wa.me.
+
+
+V4.2.27 FINAL: botão FALAR PELO WHATSAPP usa o link oficial https://wa.me/ em todos os dispositivos. Layout, responsividade, vídeo, mapa, imagens e QR Code permanecem inalterados em relação à V4.2.26.
