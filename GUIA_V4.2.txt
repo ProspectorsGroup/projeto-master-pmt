@@ -1,0 +1,67 @@
+PROJETO MASTER PMT — FASE 1 / MÓDULO 2 — V4.2
+BASE OFICIAL: V4.1.2 APROVADA
+
+O layout visual aprovado na V4.1.2 foi preservado.
+
+NOVOS RECURSOS V4.2
+1. MODO PUBLICAÇÃO
+   - Abra index.html?public=1.
+   - Remove a barra de edição e desativa edição direta.
+   - Mantém o anúncio visualmente limpo para publicação/hospedagem/incorporação.
+
+2. TRANSFERÊNCIA ENTRE PC E OUTRO NAVEGADOR/DISPOSITIVO
+   - Na Ficha-Mestre, use EXPORTAR FICHA.
+   - Será criado um arquivo JSON com dados e imagens salvos.
+   - No outro navegador/dispositivo, abra ficha-mestre.html e use IMPORTAR FICHA.
+   - Isto contorna a limitação do localStorage, que é local de cada navegador.
+
+3. LINKS DE VÍDEO E MAPA MAIS SEGUROS
+   - Abertura aceita somente URLs http/https válidas.
+   - Links ausentes ou inválidos geram aviso claro.
+
+4. WHATSAPP + QR CODE
+   - Mantida a regra aprovada: alterar número ou mensagem atualiza o link e regenera o QR.
+   - A geração visual do QR continua usando QuickChart e requer internet.
+
+GOOGLE SITES
+- O Google Sites não executa diretamente um pacote HTML local como página nativa.
+- Para usar o anúncio completo, hospede esta pasta em um endereço web HTTPS e incorpore a URL publicada no Google Sites.
+- Use preferencialmente a URL com ?public=1 para exibição pública.
+
+ARQUIVOS PRINCIPAIS
+- ficha-mestre.html : cadastro/edição/exportação/importação.
+- index.html : anúncio Premium responsivo.
+- index.html?public=1 : modo de publicação.
+- assets/ : imagens de referência.
+
+VERSÃO DE SEGURANÇA
+- README_V4.1.2_ORIGINAL.txt preserva a identificação do pacote-base aprovado.
+
+
+CORREÇÃO FUNCIONAL V4.2.1 — BOTÃO WHATSAPP
+O anúncio agora exibe o botão “FALAR PELO WHATSAPP” na área de contato. Ele usa automaticamente o mesmo número e a mesma mensagem de saudação do QR Code, inclusive após alterações na Ficha-Mestre.
+
+
+CORREÇÃO FUNCIONAL V4.2.2 — ABERTURA DIRETA DO WHATSAPP
+O botão FALAR PELO WHATSAPP passa a usar o protocolo whatsapp:// para abrir diretamente o aplicativo instalado no PC ou celular. O QR Code continua usando https://wa.me, apropriado para leitura por câmera. Se o aplicativo WhatsApp não estiver instalado ou associado ao protocolo, o sistema operacional/navegador poderá solicitar a escolha ou instalação do aplicativo.
+
+V4.2.4 - Correção do botão WhatsApp:
+- O botão passa a usar exclusivamente o link oficial https://wa.me/NUMERO?text=MENSAGEM em PC e celular.
+- A conversa deve abrir com o destinatário cadastrado e a mensagem preenchida; o envio final permanece sob ação do usuário no WhatsApp.
+- QR Code e layout visual permanecem inalterados.
+
+
+V4.2.5 - WhatsApp no PC
+- No computador, o botão usa diretamente web.whatsapp.com/send com phone, text, type=phone_number e app_absent=0.
+- O botão abre na mesma aba para reaproveitar a sessão autenticada do navegador.
+- No celular, permanece usando wa.me.
+- O QR Code continua usando wa.me.
+
+
+V4.2.6 - DIAGNÓSTICO WHATSAPP
+- O botão mostra antes do redirecionamento o telefone normalizado, a mensagem e o link oficial wa.me gerado.
+- Ao confirmar, abre exatamente esse link oficial.
+- Objetivo: separar definitivamente erro de montagem do link de redirecionamento/autenticação do WhatsApp.
+
+
+V4.2.8 — WhatsApp Web: botão convertido para link HTML direto, sem JavaScript de redirecionamento, usando web.whatsapp.com/send com phone, text, type=phone_number e app_absent=0. O QR Code permanece em wa.me.
