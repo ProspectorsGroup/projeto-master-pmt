@@ -65,3 +65,6 @@ V4.2.6 - DIAGNÓSTICO WHATSAPP
 
 
 V4.2.8 — WhatsApp Web: botão convertido para link HTML direto, sem JavaScript de redirecionamento, usando web.whatsapp.com/send com phone, text, type=phone_number e app_absent=0. O QR Code permanece em wa.me.
+
+
+V4.2.25 — WhatsApp: no computador, o botão usa web.whatsapp.com/send com telefone e mensagem; no celular e no QR Code permanece wa.me. Layout V4.2.24 preservado.

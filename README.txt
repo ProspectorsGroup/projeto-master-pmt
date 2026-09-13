@@ -93,3 +93,6 @@ V4.2.8 - Correção WhatsApp: botão passa a usar diretamente o link oficial htt
 
 
 V4.2.14 — Correção funcional do botão FALAR PELO WHATSAPP para Google Sites: abertura em nova aba, fora do iframe. Layout V4.2.13 preservado sem alterações visuais.
+
+
+V4.2.25 — WhatsApp: no computador, o botão usa web.whatsapp.com/send com telefone e mensagem; no celular e no QR Code permanece wa.me. Layout V4.2.24 preservado.
