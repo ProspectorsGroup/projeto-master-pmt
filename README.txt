@@ -96,5 +96,3 @@ V4.2.14 — Correção funcional do botão FALAR PELO WHATSAPP para Google Sites
 
 
 V4.2.16 — ajuste automático de escala no modo publicação em celular para evitar corte inferior no iframe do Google Sites. Vídeo, Google Maps, WhatsApp e QR Code preservados.
-
-V4.2.18 — correção estrutural de responsividade no Google Sites: foto principal removida do posicionamento absoluto; layout móvel em fluxo normal e mais compacto para evitar sobreposição e corte inferior. Vídeo, Google Maps, WhatsApp e QR Code preservados.
