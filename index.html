@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PROSPECTORS — Anúncio Premium V4.2.19</title>
+<title>PROSPECTORS — Anúncio Premium V4.2.21</title>
 <style>
 :root{--navy:#0b2742;--gold:#c9a34f;--ink:#12243a;--line:#d6dce2;--green:#16a34a}*{box-sizing:border-box;border-radius:0!important}html,body{margin:0;background:#e9edf1;color:var(--ink);font-family:Arial,Helvetica,sans-serif}.toolbar{position:sticky;top:0;z-index:30;display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#071b2e;padding:10px 12px}.toolbar button,.toolbar a{border:1px solid #587086;background:#12334f;color:#fff;padding:9px 12px;font:700 12px Arial;text-decoration:none;cursor:pointer}.toolbar .gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}.toolbar .spacer{flex:1}.toolbar .hint{color:#cbd7e2;font-size:12px}.sheet{width:min(1200px,calc(100% - 28px));aspect-ratio:16/9;margin:24px auto;background:#fff;border:1px solid #cfd6dc;box-shadow:0 12px 36px #0002;overflow:hidden;display:grid;grid-template-rows:10% 58% 32%}.brandbar{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid #274866}.brand-left{font-size:23px;font-weight:700;letter-spacing:.6px}.brand-right{font-size:14px;letter-spacing:.4px}.edit:focus{outline:2px solid var(--gold);outline-offset:-2px;background:#fffceb;color:var(--ink)}
 .hero{display:grid;grid-template-columns:37% 46% 17%;min-height:0;border-bottom:1px solid var(--line)}.info{grid-column:1;padding:22px 28px;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}.kicker{font-size:10px;letter-spacing:4px;margin-bottom:7px}.project{font-size:34px;line-height:.95;margin:0 0 7px;font-weight:800}.builder{font-size:17px;font-weight:800;letter-spacing:3px;margin-bottom:9px}.address{font-size:12px;line-height:1.35;padding:7px 0 9px;border-bottom:1px solid var(--line)}.facts{display:grid;grid-template-columns:1fr 1fr}.fact{padding:7px 5px 7px 0;border-bottom:1px solid var(--line)}.fact:nth-child(odd){border-right:1px solid var(--line)}.fact:nth-child(even){padding-left:10px}.fact b{display:block;text-transform:uppercase;font-size:8px;color:#617184;margin-bottom:2px}.fact span{font-size:12px;font-weight:800}.pricebox{margin-top:9px;border-top:1px solid var(--gold);padding-top:8px}.price-label{font-size:9px;font-weight:800;color:#59697a}.price-value{font-size:21px;font-weight:800;color:var(--navy);margin-top:2px}.photo-column{grid-column:2;grid-row:1;position:relative;min-width:0;background:#dde3e8;border-right:1px solid var(--line)}.mainphoto{position:absolute;inset:0;overflow:hidden}.mainphoto img{width:100%;height:100%;object-fit:cover;display:block}.photo-change{position:absolute;left:10px;bottom:10px;background:#fff;color:var(--navy);border:1px solid #b7c0c8;padding:6px 8px;font:700 9px Arial;cursor:pointer}.photo-change input{display:none}.actions-rail{grid-column:3;grid-row:1;display:grid;grid-template-rows:1fr 1fr;background:#fff}.action{border:0;border-bottom:1px solid var(--line);background:#fff;color:var(--navy);font-weight:800;font-size:12px;cursor:pointer;padding:12px}.action:last-child{border-bottom:0}.action .ico{display:block;font-size:26px;margin-bottom:7px;color:var(--gold)}
 .bottom{display:grid;grid-template-columns:37% 63%;min-height:0}.gallery{grid-column:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;background:#fff;border-right:1px solid #8293a2}.gphoto{position:relative;overflow:hidden;background:#e3e7eb}.gphoto img{width:100%;height:100%;object-fit:cover;display:block}.gphoto label{position:absolute;left:6px;bottom:6px;background:#fff;border:1px solid #bbc3ca;color:var(--navy);padding:4px 6px;font:700 8px Arial;cursor:pointer}.gphoto input{display:none}.contact{grid-column:2;background:var(--navy);color:#fff;display:grid;grid-template-columns:1fr 185px;align-items:center;padding:20px 26px}.broker h3{font-size:27px;margin:0 0 4px}.broker .role,.broker .creci{font-size:14px;margin-bottom:3px}.contact-meta{margin-top:13px;font-size:15px;line-height:1.7}.contact-meta a{color:#fff;text-decoration:none}.wa-button{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;padding:9px 14px;border:1px solid #fff;background:#fff;color:var(--navy);font:800 11px Arial;text-decoration:none;letter-spacing:.4px;cursor:pointer}.wa-button:hover{background:#eef3f6}.qrbox{border-left:1px solid #7f94a7;padding-left:20px;text-align:center}.qrbox .scan{font-size:10px;letter-spacing:3px;margin-bottom:6px}.qrbox img{width:135px;height:135px;background:#fff;padding:5px;object-fit:contain}.highlights,.contactline,.broker-photo,.map-under-photo,.side-actions,.smallnote{display:none!important}
-/* V4.2.19 — no modo publicação o anúncio mantém o canvas 16:9 original e é escalado por inteiro. */
-.public-mode{background:#fff;position:relative;overflow:hidden!important;margin:0!important;padding:0!important}
-.public-mode .sheet{width:1200px!important;height:675px!important;max-width:none!important;aspect-ratio:auto!important;margin:0!important;box-shadow:none!important;border:0!important;position:absolute;top:0;left:0;transform-origin:top left;overflow:hidden!important}
-.public-mode .edit:focus{outline:none;background:transparent;color:inherit}.public-mode .action{cursor:pointer}.public-mode .photo-change,.public-mode .gphoto label{display:none!important}
-@media print{body{background:#fff}.toolbar{display:none}.sheet{width:100%;margin:0;border:0;box-shadow:none}.photo-change,.gphoto label{display:none}}
+@media(max-width:760px){.sheet{width:100%;margin:0;aspect-ratio:auto;display:block}.brandbar{min-height:64px}.hero{display:grid;grid-template-columns:1fr}.info,.photo-column,.actions-rail{grid-column:1;grid-row:auto}.photo-column{height:360px}.actions-rail{grid-template-columns:1fr 1fr;grid-template-rows:90px}.bottom{grid-template-columns:1fr}.gallery,.contact{grid-column:1}.gallery{height:230px;border-right:0}.contact{grid-template-columns:1fr 140px}.qrbox img{width:110px;height:110px}}.public-mode{background:#fff}.public-mode .sheet{margin:0 auto;box-shadow:none;border:0}.public-mode .edit:focus{outline:none;background:transparent;color:inherit}.public-mode .action{cursor:pointer}.public-mode .photo-change,.public-mode .gphoto label{display:none!important}@media print{body{background:#fff}.toolbar{display:none}.sheet{width:100%;margin:0;border:0;box-shadow:none}.photo-change,.gphoto label{display:none}}
 </style>
 </head>
 <body>
@@ -21,7 +17,7 @@
   <button onclick="window.print()">IMPRIMIR / PDF</button>
   <button onclick="saveEditable()">SALVAR ALTERAÇÕES DIRETAS</button>
   <button onclick="resetExample()">RECARREGAR DADOS DA FICHA</button>
-  <a href="index.html?public=1">MODO PUBLICAÇÃO</a><span class="spacer"></span><span class="hint">V4.2.19 • canvas proporcional 16:9 • funções aprovadas preservadas</span>
+  <a href="index.html?public=1">MODO PUBLICAÇÃO</a><span class="spacer"></span><span class="hint">V4.2.21 • RECUPERAÇÃO ESTÁVEL • base V4.2.14 preservada</span>
 </div>
 <main class="sheet">
 <header class="brandbar"><div class="brand-left edit" contenteditable="true" data-k="brandLeft">PROSPECTORS GROUP</div><div class="brand-right edit" contenteditable="true" data-k="brandRight">Corretores Associados</div></header>
@@ -78,31 +74,6 @@ function openVideo(){const u=(localStorage.getItem(key('videoUrl'))||DEF.videoUr
 function openMap(){const address=(localStorage.getItem(key('address'))||DEF.address||'').trim();if(!address){alert('Cadastre o endereço do imóvel na Ficha-Mestre.');return}const url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(address);window.open(url,'_blank','noopener,noreferrer')}
 function resetExample(){load();alert('Dados recarregados da Ficha-Mestre / armazenamento deste navegador.')}
 function applyMode(){const q=new URLSearchParams(location.search);if(q.get('public')==='1'){document.body.classList.add('public-mode');document.querySelector('.toolbar')?.remove();document.querySelectorAll('[contenteditable="true"]').forEach(el=>el.setAttribute('contenteditable','false'));document.querySelectorAll('.photo-change,.gphoto label').forEach(el=>el.style.display='none')}}
-function fitPublicCanvas(){
- if(!document.body.classList.contains('public-mode'))return;
- const sheet=document.querySelector('.sheet');if(!sheet)return;
- const BASE_W=1200, BASE_H=675;
- const vw=Math.max(1,document.documentElement.clientWidth||window.innerWidth||BASE_W);
- const scale=Math.min(1,vw/BASE_W);
- const visualH=Math.ceil(BASE_H*scale);
- const left=vw>BASE_W?Math.floor((vw-BASE_W)/2):0;
- sheet.style.left=left+'px';
- sheet.style.top='0px';
- sheet.style.width=BASE_W+'px';
- sheet.style.height=BASE_H+'px';
- sheet.style.transform='scale('+scale+')';
- document.documentElement.style.width='100%';
- document.documentElement.style.height=visualH+'px';
- document.documentElement.style.minHeight=visualH+'px';
- document.documentElement.style.overflow='hidden';
- document.body.style.width='100%';
- document.body.style.height=visualH+'px';
- document.body.style.minHeight=visualH+'px';
- document.body.style.overflow='hidden';
-}
 load();applyMode();
-requestAnimationFrame(()=>requestAnimationFrame(fitPublicCanvas));
-window.addEventListener('resize',()=>{clearTimeout(window.__pmtFit);window.__pmtFit=setTimeout(fitPublicCanvas,100)});
-window.addEventListener('orientationchange',()=>setTimeout(fitPublicCanvas,180));
 </script>
 </body></html>

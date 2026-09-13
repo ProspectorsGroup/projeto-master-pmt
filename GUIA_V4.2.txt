@@ -65,8 +65,3 @@ V4.2.6 - DIAGNÓSTICO WHATSAPP
 
 
 V4.2.8 — WhatsApp Web: botão convertido para link HTML direto, sem JavaScript de redirecionamento, usando web.whatsapp.com/send com phone, text, type=phone_number e app_absent=0. O QR Code permanece em wa.me.
-
-V4.2.15: ajuste de responsividade para celular no Google Sites; vídeo, mapa, WhatsApp e QR Code preservados.
-
-
-V4.2.16 — ajuste automático de escala no modo publicação em celular para evitar corte inferior no iframe do Google Sites. Vídeo, Google Maps, WhatsApp e QR Code preservados.
