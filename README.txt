@@ -90,3 +90,6 @@ V4.2.8 — WhatsApp Web: botão convertido para link HTML direto, sem JavaScript
 
 
 V4.2.8 - Correção WhatsApp: botão passa a usar diretamente o link oficial https://wa.me/<numero>?text=<mensagem>, sem web.whatsapp.com/send intermediário.
+
+
+V4.2.14 — Correção funcional do botão FALAR PELO WHATSAPP para Google Sites: abertura em nova aba, fora do iframe. Layout V4.2.13 preservado sem alterações visuais.
