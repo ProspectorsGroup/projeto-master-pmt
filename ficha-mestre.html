@@ -1,73 +1,79 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ficha-Mestre — PROSPECTORS V4.2</title>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROSPECTORS — Anúncio Premium V4.2.21</title>
 <style>
-:root{--navy:#0b2742;--gold:#c9a34f;--ink:#12243a;--soft:#eef2f5;--line:#cfd6dc}*{box-sizing:border-box;border-radius:0!important}body{font-family:Arial,Helvetica,sans-serif;background:var(--soft);margin:0;color:var(--ink)}.top{background:var(--navy);color:#fff;padding:20px 28px;display:flex;justify-content:space-between;align-items:center}.top b{font-size:20px}.wrap{max-width:1080px;margin:26px auto;background:#fff;border:1px solid var(--line);padding:30px}.wrap h1{margin:0 0 6px;font-size:32px}.intro{color:#5d6c7b;line-height:1.5;margin-top:8px}.flow{border-left:4px solid var(--gold);background:#f7f8fa;padding:14px 16px;line-height:1.5;margin:20px 0}.section{border-top:1px solid #dfe4e8;margin-top:26px;padding-top:22px}.section h2{font-size:21px;margin:0 0 16px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}.full{grid-column:1/-1}label{display:block;font-size:12px;font-weight:800;color:#516172}input,textarea{display:block;width:100%;margin-top:6px;padding:11px 12px;border:1px solid #bcc6cf;background:#fff;font:15px Arial;color:#14263a}textarea{min-height:88px;resize:vertical}.note{font-size:12px;color:#6a7784;line-height:1.45;margin-top:7px}.status{margin-top:12px;color:#536273;font-size:13px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.actions button,.actions a{border:1px solid var(--navy);background:var(--navy);color:#fff;padding:12px 16px;font-weight:800;text-decoration:none;cursor:pointer}.actions .gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}.file-status{margin-top:6px;font-size:12px;color:#5c6a77}.qr-preview{display:flex;align-items:center;gap:18px;margin-top:10px}.qr-preview img{width:150px;height:150px;background:#fff;border:1px solid #bcc6cf;padding:5px}.qr-preview span{font-size:13px;line-height:1.5;color:#526171}@media(max-width:720px){.wrap{margin:0;border-left:0;border-right:0;padding:22px 18px}.grid{grid-template-columns:1fr}.full{grid-column:auto}.top{padding:16px 18px}.top span{display:none}}
-</style></head>
+:root{--navy:#0b2742;--gold:#c9a34f;--ink:#12243a;--line:#d6dce2;--green:#16a34a}*{box-sizing:border-box;border-radius:0!important}html,body{margin:0;background:#e9edf1;color:var(--ink);font-family:Arial,Helvetica,sans-serif}.toolbar{position:sticky;top:0;z-index:30;display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#071b2e;padding:10px 12px}.toolbar button,.toolbar a{border:1px solid #587086;background:#12334f;color:#fff;padding:9px 12px;font:700 12px Arial;text-decoration:none;cursor:pointer}.toolbar .gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}.toolbar .spacer{flex:1}.toolbar .hint{color:#cbd7e2;font-size:12px}.sheet{width:min(1200px,calc(100% - 28px));aspect-ratio:16/9;margin:24px auto;background:#fff;border:1px solid #cfd6dc;box-shadow:0 12px 36px #0002;overflow:hidden;display:grid;grid-template-rows:10% 58% 32%}.brandbar{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid #274866}.brand-left{font-size:23px;font-weight:700;letter-spacing:.6px}.brand-right{font-size:14px;letter-spacing:.4px}.edit:focus{outline:2px solid var(--gold);outline-offset:-2px;background:#fffceb;color:var(--ink)}
+.hero{display:grid;grid-template-columns:37% 46% 17%;min-height:0;border-bottom:1px solid var(--line)}.info{grid-column:1;padding:22px 28px;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}.kicker{font-size:10px;letter-spacing:4px;margin-bottom:7px}.project{font-size:34px;line-height:.95;margin:0 0 7px;font-weight:800}.builder{font-size:17px;font-weight:800;letter-spacing:3px;margin-bottom:9px}.address{font-size:12px;line-height:1.35;padding:7px 0 9px;border-bottom:1px solid var(--line)}.facts{display:grid;grid-template-columns:1fr 1fr}.fact{padding:7px 5px 7px 0;border-bottom:1px solid var(--line)}.fact:nth-child(odd){border-right:1px solid var(--line)}.fact:nth-child(even){padding-left:10px}.fact b{display:block;text-transform:uppercase;font-size:8px;color:#617184;margin-bottom:2px}.fact span{font-size:12px;font-weight:800}.pricebox{margin-top:9px;border-top:1px solid var(--gold);padding-top:8px}.price-label{font-size:9px;font-weight:800;color:#59697a}.price-value{font-size:21px;font-weight:800;color:var(--navy);margin-top:2px}.photo-column{grid-column:2;grid-row:1;position:relative;min-width:0;background:#dde3e8;border-right:1px solid var(--line)}.mainphoto{position:absolute;inset:0;overflow:hidden}.mainphoto img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block;background:#dde3e8}.photo-change{position:absolute;left:10px;bottom:10px;background:#fff;color:var(--navy);border:1px solid #b7c0c8;padding:6px 8px;font:700 9px Arial;cursor:pointer}.photo-change input{display:none}.actions-rail{grid-column:3;grid-row:1;display:grid;grid-template-rows:1fr 1fr;background:#fff}.action{border:0;border-bottom:1px solid var(--line);background:#fff;color:var(--navy);font-weight:800;font-size:12px;cursor:pointer;padding:12px}.action:last-child{border-bottom:0}.action .ico{display:block;font-size:26px;margin-bottom:7px;color:var(--gold)}
+.bottom{display:grid;grid-template-columns:37% 63%;min-height:0}.gallery{grid-column:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;background:#fff;border-right:1px solid #8293a2}.gphoto{position:relative;overflow:hidden;background:#e3e7eb}.gphoto img{width:100%;height:100%;object-fit:cover;display:block}.gphoto label{position:absolute;left:6px;bottom:6px;background:#fff;border:1px solid #bbc3ca;color:var(--navy);padding:4px 6px;font:700 8px Arial;cursor:pointer}.gphoto input{display:none}.contact{grid-column:2;background:var(--navy);color:#fff;display:grid;grid-template-columns:1fr 185px;align-items:center;padding:20px 26px}.broker h3{font-size:27px;margin:0 0 4px}.broker .role,.broker .creci{font-size:14px;margin-bottom:3px}.contact-meta{margin-top:13px;font-size:15px;line-height:1.7}.contact-meta a{color:#fff;text-decoration:none}.wa-button{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;padding:9px 14px;border:1px solid #fff;background:#fff;color:var(--navy);font:800 11px Arial;text-decoration:none;letter-spacing:.4px;cursor:pointer}.wa-button:hover{background:#eef3f6}.qrbox{border-left:1px solid #7f94a7;padding-left:20px;text-align:center}.qrbox .scan{font-size:10px;letter-spacing:3px;margin-bottom:6px}.qrbox img{width:135px;height:135px;background:#fff;padding:5px;object-fit:contain}.highlights,.contactline,.broker-photo,.map-under-photo,.side-actions,.smallnote{display:none!important}
+@media(max-width:760px){html,body{width:100%;max-width:100%;overflow-x:hidden}.sheet{width:100%;max-width:100%;margin:0;aspect-ratio:auto;display:block;overflow-x:hidden}.sheet *{min-width:0;max-width:100%}.brandbar{min-height:64px}.hero{display:grid;grid-template-columns:1fr}.info,.photo-column,.actions-rail{grid-column:1;grid-row:auto}.photo-column{height:360px}.actions-rail{grid-template-columns:1fr 1fr;grid-template-rows:90px}.bottom{grid-template-columns:1fr}.gallery,.contact{grid-column:1}.gallery{height:230px;border-right:0}.contact{grid-template-columns:minmax(0,1fr) 120px;padding:16px 14px}.broker{min-width:0}.contact-meta{font-size:13px;overflow-wrap:anywhere}.qrbox{padding-left:12px;min-width:0}.qrbox img{width:96px;height:96px}}.public-mode{background:#fff}.public-mode .sheet{margin:0 auto;box-shadow:none;border:0}.public-mode .edit:focus{outline:none;background:transparent;color:inherit}.public-mode .action{cursor:pointer}.public-mode .photo-change,.public-mode .gphoto label{display:none!important}@media print{body{background:#fff}.toolbar{display:none}.sheet{width:100%;margin:0;border:0;box-shadow:none}.photo-change,.gphoto label{display:none}}
+</style>
+</head>
 <body>
-<header class="top"><b>PROSPECTORS GROUP</b><span>Ficha-Mestre • Fase 1 / Módulo 2 • V4.2</span></header>
-<div class="wrap"><h1>Ficha-Mestre do Imóvel</h1><p class="intro"><b>Fonte única dos dados do anúncio.</b> Tudo que for alterado aqui alimenta o Anúncio Premium. O telefone e a mensagem do WhatsApp também geram automaticamente um novo QR Code.</p>
-<div class="flow"><b>Fluxo:</b> Ficha-Mestre → Anúncio Premium editável → PDF / Web / WhatsApp / adaptações para mídias.</div>
-
-<section class="section"><h2>1. Identidade do anúncio</h2><div class="grid">
-<label>Marca / topo esquerdo<input name="brandLeft" value="PROSPECTORS GROUP"></label>
-<label>Topo direito<input name="brandRight" value="Corretores Associados"></label>
-<label>Chamada superior<input name="kicker" value="LANÇAMENTO"></label>
-<label>Nome do Projeto<input name="title" value="RESERVA PARAÍSO"></label>
-<label>Construtora<input name="builder" value="EZTEC"></label>
-<label class="full">Endereço<textarea name="address">Rua Afonso de Freitas, 820&#10;Paraíso – São Paulo/SP</textarea></label>
-<label>Data de entrega<input name="delivery" value="DEZ/2027"></label>
-<label>Metragens dos apartamentos<input name="area" value="125 a 245 m²"></label>
-<label>Tipologias<input name="type" value="3 e 4 suítes"></label>
-<label>Vagas de garagem<input name="parking" value="2 a 4 vagas"></label>
-<label>Preço a partir de<input name="price" value="R$ 1.000.000,00"></label>
-</div></section>
-
-<section class="section"><h2>2. Destaques editáveis do projeto</h2><div class="grid">
-<label class="full">Título do campo<input name="highlightsTitle" value="DESTAQUES DO PROJETO"></label>
-<label class="full">Texto livre / descrição<textarea name="description">Um projeto exclusivo que combina arquitetura contemporânea, plantas inteligentes e infraestrutura completa de lazer. Tudo pensado para oferecer bem-estar, praticidade e valorização.</textarea></label>
-<label>Destaque 1<input name="f1" value="Localização privilegiada"></label><label>Destaque 5<input name="f5" value="Segurança e privacidade"></label>
-<label>Destaque 2<input name="f2" value="Plantas amplas e bem distribuídas"></label><label>Destaque 6<input name="f6" value="Projeto contemporâneo"></label>
-<label>Destaque 3<input name="f3" value="Acabamentos de alto padrão"></label><label>Destaque 7<input name="f7" value="Excelente opção para morar ou investir"></label>
-<label>Destaque 4<input name="f4" value="Infraestrutura completa de lazer"></label><label>Destaque 8<input name="f8" value="Sofisticação e bem viver"></label>
-</div></section>
-
-<section class="section"><h2>3. Fotos e mídias</h2><div class="grid">
-<label>Foto principal<input id="mainImageFile" type="file" accept="image/*"><div id="mainImageStatus" class="file-status">Use uma imagem horizontal ou vertical de boa resolução.</div></label>
-<label>Foto 2<input id="gallery1File" type="file" accept="image/*"><div id="gallery1Status" class="file-status">Imagem de ambiente, lazer ou fachada.</div></label>
-<label>Foto 3<input id="gallery2File" type="file" accept="image/*"><div id="gallery2Status" class="file-status">Imagem complementar.</div></label>
-<label>Foto do corretor<input id="brokerImageFile" type="file" accept="image/*"><div id="brokerImageStatus" class="file-status">Retrato do corretor.</div></label>
-<label>Link do vídeo<input name="videoUrl" placeholder="https://youtube.com/... ou Vimeo"></label>
-<label>Link do Google Maps<input name="mapUrl" readonly placeholder="Gerado automaticamente a partir do endereço"></label>
-</div><p class="note">O anúncio mantém apenas um botão de mapa e um botão de vídeo. O vídeo abre diretamente em nova aba, evitando problemas de player incorporado.</p></section>
-
-<section class="section"><h2>4. Corretor, WhatsApp e QR Code dinâmico</h2><div class="grid">
-<label>Nome do corretor<input name="contactName" value="RICK PALMIERI"></label>
-<label>Função<input name="contactRole" value="Corretor de Imóveis"></label>
-<label>CRECI<input name="creci" value="312399"></label>
-<label>E-mail<input name="email" value="pros.corretor@gmail.com"></label>
-<label>WhatsApp (com DDI 55)<input name="whatsapp" value="5511919186593" inputmode="tel"></label>
-<label class="full">Mensagem automática do WhatsApp<textarea name="whatsappMessage">Olá, vim pelo QR CODE e gostaria de mais informações. Aguardo seu retorno!</textarea></label>
+<div class="toolbar">
+  <a class="gold" href="ficha-mestre.html">EDITAR FICHA-MESTRE</a>
+  <button onclick="window.print()">IMPRIMIR / PDF</button>
+  <button onclick="saveEditable()">SALVAR ALTERAÇÕES DIRETAS</button>
+  <button onclick="resetExample()">RECARREGAR DADOS DA FICHA</button>
+  <a href="index.html?public=1">MODO PUBLICAÇÃO</a><span class="spacer"></span><span class="hint">V4.2.21 • RECUPERAÇÃO ESTÁVEL • base V4.2.14 preservada</span>
 </div>
-<div class="qr-preview"><img id="qrPreview" alt="Prévia do QR Code"><span><b>Regra automática:</b><br>alterou o número ou a mensagem → o link do WhatsApp é atualizado → um novo QR Code é gerado. Não é necessário carregar um QR manualmente.</span></div>
+<main class="sheet">
+<header class="brandbar"><div class="brand-left edit" contenteditable="true" data-k="brandLeft">PROSPECTORS GROUP</div><div class="brand-right edit" contenteditable="true" data-k="brandRight">Corretores Associados</div></header>
+<section class="hero">
+<aside class="info"><div class="kicker edit" contenteditable="true" data-k="kicker">LANÇAMENTO</div><h1 class="project edit" contenteditable="true" data-k="title">TODAY CENTRO</h1><div class="builder"><span class="edit" contenteditable="true" data-k="builder">CANOPUS</span></div><div class="address edit" contenteditable="true" data-k="address">Av São Luís, 200<br>Centro – São Paulo/SP</div><div class="facts"><div class="fact"><b>Entrega</b><span class="edit" contenteditable="true" data-k="delivery">Dezembro/2026</span></div><div class="fact"><b>Metragens</b><span class="edit" contenteditable="true" data-k="area">78 m² a 142 m²</span></div><div class="fact"><b>Tipologias</b><span class="edit" contenteditable="true" data-k="type">Apartamentos</span></div><div class="fact"><b>Vagas</b><span class="edit" contenteditable="true" data-k="parking">1 a 2 vagas</span></div></div><div class="pricebox"><div class="price-label">PREÇO A PARTIR DE:</div><div class="price-value edit" contenteditable="true" data-k="price">R$ 6.000.000</div></div></aside>
+<div class="photo-column"><div class="mainphoto"><img id="mainImg" src="assets/foto-principal-aprovada.png" alt="Imagem principal"><label class="photo-change">TROCAR FOTO<input type="file" accept="image/*" onchange="changeImage(event,'mainImage','mainImg',1600)"></label></div></div>
+<div class="actions-rail"><a id="videoBtn" class="action" href="https://www.youtube.com/shorts/tsZPxL8ZDL0" target="_blank" rel="noopener noreferrer" style="text-decoration:none;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center"><span class="ico">▷</span>ASSISTA AO VÍDEO</a><button class="action" onclick="openMap()"><span class="ico">⌖</span>VER LOCALIZAÇÃO</button></div>
 </section>
-
-<div class="actions"><button class="gold" onclick="save(false)">SALVAR FICHA-MESTRE</button><button onclick="save(true)">SALVAR E ABRIR ANÚNCIO PREMIUM</button><a href="index.html">ABRIR ANÚNCIO</a><a href="index.html?public=1">ABRIR MODO PUBLICAÇÃO</a><button onclick="exportData()">EXPORTAR FICHA</button><label style="display:inline-flex;align-items:center;border:1px solid var(--navy);background:#fff;color:var(--navy);padding:12px 16px;font-weight:800;cursor:pointer">IMPORTAR FICHA<input id="importFile" type="file" accept="application/json,.json" style="display:none" onchange="importData(event)"></label></div><div id="status" class="status"></div>
-</div>
+<section class="bottom"><div class="gallery"><div class="gphoto"><img id="gallery1Img" src="assets/foto-secundaria-1-aprovada.png" alt="Foto 2"><label>TROCAR FOTO 2<input type="file" accept="image/*" onchange="changeImage(event,'gallery1','gallery1Img',1400)"></label></div><div class="gphoto"><img id="gallery2Img" src="assets/foto-secundaria-2-aprovada.png" alt="Foto 3"><label>TROCAR FOTO 3<input type="file" accept="image/*" onchange="changeImage(event,'gallery2','gallery2Img',1400)"></label></div></div><section class="contact"><div class="broker"><h3 class="edit" contenteditable="true" data-k="contactName">RICK PALMIERI</h3><div class="role edit" contenteditable="true" data-k="contactRole">Corretor de Imóveis</div><div class="creci">CRECI <span class="edit" contenteditable="true" data-k="creci">312399</span></div><div class="contact-meta">WhatsApp: <span class="edit" contenteditable="true" data-k="whatsappDisplay">+55 11 98550-1019</span><br>E-mail: <span class="edit" contenteditable="true" data-k="email">prospectors.imoveis@gmail.com</span></div><a id="waBtn" class="wa-button" href="#">FALAR PELO WHATSAPP</a></div><div class="qrbox"><div class="scan">SCAN ME</div><img id="qrImg" alt="QR Code dinâmico"></div></section></section>
+</main>
 <script>
-const inputs=[...document.querySelectorAll('input[name],textarea[name]')];
+const DEF={
+ brandLeft:'PROSPECTORS GROUP',brandRight:'Corretores Associados',kicker:'LANÇAMENTO',title:'TODAY CENTRO',builder:'CANOPUS',
+ address:'Av São Luís, 200\nCentro – São Paulo/SP',delivery:'Dezembro/2026',area:'78 m² a 142 m²',type:'Apartamentos',parking:'1 a 2 vagas',price:'R$ 6.000.000',
+ highlightsTitle:'DESTAQUES DO PROJETO',description:'Um projeto exclusivo que combina arquitetura contemporânea, plantas inteligentes e infraestrutura completa de lazer. Tudo pensado para oferecer bem-estar, praticidade e valorização.',
+ f1:'Localização privilegiada',f2:'Plantas amplas e bem distribuídas',f3:'Acabamentos de alto padrão',f4:'Infraestrutura completa de lazer',f5:'Segurança e privacidade',f6:'Projeto contemporâneo',f7:'Excelente opção para morar ou investir',f8:'Sofisticação e bem viver',
+ contactName:'RICK PALMIERI',contactRole:'Corretor de Imóveis',creci:'312399',whatsapp:'5511985501019',whatsappDisplay:'+55 11 98550-1019',email:'prospectors.imoveis@gmail.com',
+ whatsappMessage:'Olá, vim pelo QR CODE e gostaria de mais informações. Aguardo seu retorno!',mapUrl:'',videoUrl:'https://www.youtube.com/shorts/tsZPxL8ZDL0'
+};
 function key(k){return 'pmt_'+k}
+function ls(k){let v=localStorage.getItem(key(k));return v===null?DEF[k]:v}
+function html(v){return String(v??'').replace(/\n/g,'<br>')}
+function textOf(el){return (el.innerText||'').trim()}
 function normalizePhone(v){let d=String(v||'').replace(/\D/g,'');if((d.length===10||d.length===11)&&!d.startsWith('55'))d='55'+d;return d}
-function waUrl(){let p=normalizePhone(document.querySelector('[name="whatsapp"]').value);let m=document.querySelector('[name="whatsappMessage"]').value||'';return 'https://wa.me/'+p+'?text='+encodeURIComponent(m)}
-function mapFromAddress(){let a=(document.querySelector('[name="address"]')?.value||'').trim();return a?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(a):''}
-function refreshMap(){let el=document.querySelector('[name="mapUrl"]');if(el)el.value=mapFromAddress()}
-function refreshQR(){document.getElementById('qrPreview').src='https://quickchart.io/qr?size=220&margin=1&text='+encodeURIComponent(waUrl())}
+function formatPhone(v){let d=normalizePhone(v);let m=d.match(/^55(\d{2})(\d{4,5})(\d{4})$/);return m?'+55 '+m[1]+' '+m[2]+'-'+m[3]:v}
+function waData(){const phone=normalizePhone(localStorage.getItem(key('whatsapp'))||textOf(document.querySelector('[data-k="whatsappDisplay"]'))||DEF.whatsapp);const msg=localStorage.getItem(key('whatsappMessage'))||DEF.whatsappMessage;return {phone,msg}}
+function waUrl(){const {phone,msg}=waData();return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg)}
+function isMobile(){return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)}
+function waButtonUrl(){return waUrl()}
+function refreshContact(){
+ const raw=localStorage.getItem(key('whatsapp'))||normalizePhone(textOf(document.querySelector('[data-k="whatsappDisplay"]')))||DEF.whatsapp;
+ const url='https://wa.me/'+normalizePhone(raw)+'?text='+encodeURIComponent(localStorage.getItem(key('whatsappMessage'))||DEF.whatsappMessage);
+ const display=formatPhone(raw);const d=document.querySelector('[data-k="whatsappDisplay"]');if(d)d.textContent=display;
+ const wb=document.getElementById('waBtn');if(wb){wb.href=waButtonUrl();wb.target='_blank';wb.rel='noopener noreferrer';wb.onclick=null;wb.title='Abrir conversa no WhatsApp';}
+ const email=textOf(document.querySelector('[data-k="email"]'))||DEF.email;
+ const qr=document.getElementById('qrImg');if(qr)qr.src='https://quickchart.io/qr?size=260&margin=1&text='+encodeURIComponent(url);
+}
+function load(){
+ document.querySelectorAll('.edit[data-k]').forEach(el=>{let k=el.dataset.k;let v=localStorage.getItem(key(k));if(v===null)v=DEF[k];if(v!==undefined&&v!==null)el.innerHTML=html(v)});
+ const wa=localStorage.getItem(key('whatsapp'));if(wa){let d=document.querySelector('[data-k="whatsappDisplay"]');if(d)d.textContent=formatPhone(wa)}
+ [['mainImage','mainImg'],['gallery1','gallery1Img'],['gallery2','gallery2Img'],['brokerImage','brokerImg']].forEach(([k,id])=>{let v=localStorage.getItem(key(k));if(v)document.getElementById(id).src=v});
+ refreshContact();
+ const vb=document.getElementById('videoBtn');if(vb){vb.href=(localStorage.getItem(key('videoUrl'))||DEF.videoUrl);}
+}
+function saveEditable(){
+ document.querySelectorAll('.edit[data-k]').forEach(el=>{let k=el.dataset.k;if(k==='whatsappDisplay'){let p=normalizePhone(textOf(el));localStorage.setItem(key('whatsapp'),p);localStorage.setItem(key(k),formatPhone(p));}else localStorage.setItem(key(k),textOf(el))});
+ refreshContact();alert('Alterações salvas neste navegador. O QR Code foi sincronizado com o WhatsApp atual.');
+}
+document.querySelectorAll('.edit[data-k]').forEach(el=>el.addEventListener('input',()=>{if(el.dataset.k==='whatsappDisplay'){localStorage.setItem(key('whatsapp'),normalizePhone(textOf(el)));}else localStorage.setItem(key(el.dataset.k),textOf(el));if(['whatsappDisplay','email'].includes(el.dataset.k))refreshContact()}));
 function compress(file,max,quality=.86){return new Promise((resolve,reject)=>{let r=new FileReader();r.onload=()=>{let img=new Image();img.onload=()=>{let ratio=Math.min(1,max/Math.max(img.width,img.height));let c=document.createElement('canvas');c.width=Math.round(img.width*ratio);c.height=Math.round(img.height*ratio);c.getContext('2d').drawImage(img,0,0,c.width,c.height);resolve(c.toDataURL('image/jpeg',quality))};img.onerror=reject;img.src=r.result};r.onerror=reject;r.readAsDataURL(file)})}
-function setupFile(inputId,keyName,statusId,max){let inp=document.getElementById(inputId);inp.addEventListener('change',async e=>{let f=e.target.files&&e.target.files[0];if(!f)return;document.getElementById(statusId).textContent='Processando '+f.name+'...';try{let d=await compress(f,max);localStorage.setItem(key(keyName),d);document.getElementById(statusId).textContent=f.name+' — imagem salva neste navegador.'}catch(err){document.getElementById(statusId).textContent='Falha ao carregar a imagem.'}inp.value=''})}
-setupFile('mainImageFile','mainImage','mainImageStatus',1600);setupFile('gallery1File','gallery1','gallery1Status',1400);setupFile('gallery2File','gallery2','gallery2Status',1400);setupFile('brokerImageFile','brokerImage','brokerImageStatus',700);
-function load(){inputs.forEach(el=>{let v=localStorage.getItem(key(el.name));if(v!==null)el.value=v});['mainImage','gallery1','gallery2','brokerImage'].forEach((k,i)=>{if(localStorage.getItem(key(k))){let ids=['mainImageStatus','gallery1Status','gallery2Status','brokerImageStatus'];document.getElementById(ids[i]).textContent='Imagem já salva neste navegador.'}});refreshMap();refreshQR()}
-function save(open){refreshMap();inputs.forEach(el=>{let v=el.value;if(el.name==='whatsapp')v=normalizePhone(v);localStorage.setItem(key(el.name),v)});localStorage.setItem(key('whatsappDisplay'),document.querySelector('[name="whatsapp"]').value);refreshQR();document.getElementById('status').textContent='Ficha salva. WhatsApp, QR Code e Google Maps sincronizados com os dados atuais.';if(open)setTimeout(()=>location.href='index.html',120)}
-document.querySelector('[name="whatsapp"]').addEventListener('input',refreshQR);document.querySelector('[name="whatsappMessage"]').addEventListener('input',refreshQR);document.querySelector('[name="address"]').addEventListener('input',refreshMap);
-function exportData(){save(false);const data={version:'4.2',exportedAt:new Date().toISOString(),fields:{},images:{}};inputs.forEach(el=>data.fields[el.name]=localStorage.getItem(key(el.name))??el.value);['mainImage','gallery1','gallery2','brokerImage'].forEach(k=>{let v=localStorage.getItem(key(k));if(v)data.images[k]=v});const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='PROJETO_MASTER_PMT_Ficha_V4.2.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);document.getElementById('status').textContent='Ficha exportada. Use este arquivo para levar os dados a outro navegador/dispositivo.'}
-function importData(e){let f=e.target.files&&e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let data=JSON.parse(r.result);if(!data||typeof data!=='object')throw new Error();Object.entries(data.fields||{}).forEach(([k,v])=>localStorage.setItem(key(k),String(v??'')));Object.entries(data.images||{}).forEach(([k,v])=>{if(typeof v==='string'&&v.startsWith('data:image/'))localStorage.setItem(key(k),v)});load();document.getElementById('status').textContent='Ficha importada com sucesso. WhatsApp e QR Code sincronizados.'}catch(err){document.getElementById('status').textContent='Arquivo de ficha inválido ou incompatível.'}e.target.value=''};r.readAsText(f)}
-load();
-</script></body></html>
+async function changeImage(e,k,id,max){let f=e.target.files&&e.target.files[0];if(!f)return;try{let data=await compress(f,max);localStorage.setItem(key(k),data);document.getElementById(id).src=data}catch(err){alert('Não foi possível carregar a imagem.')};e.target.value=''}
+function safeOpen(raw,label){let u=String(raw||'').trim();if(!u){alert('Cadastre o link de '+label+' na Ficha-Mestre.');return}try{let x=new URL(u);if(!['http:','https:'].includes(x.protocol))throw new Error();window.open(x.href,'_blank','noopener,noreferrer')}catch(e){alert('O link de '+label+' não é válido. Use um endereço começando por https:// ou http://.')}}
+function openVideo(){const u=(localStorage.getItem(key('videoUrl'))||DEF.videoUrl||'').trim();safeOpen(u,'vídeo')}
+function openMap(){const address=(localStorage.getItem(key('address'))||DEF.address||'').trim();if(!address){alert('Cadastre o endereço do imóvel na Ficha-Mestre.');return}const url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(address);window.open(url,'_blank','noopener,noreferrer')}
+function resetExample(){load();alert('Dados recarregados da Ficha-Mestre / armazenamento deste navegador.')}
+function applyMode(){const q=new URLSearchParams(location.search);if(q.get('public')==='1'){document.body.classList.add('public-mode');document.querySelector('.toolbar')?.remove();document.querySelectorAll('[contenteditable="true"]').forEach(el=>el.setAttribute('contenteditable','false'));document.querySelectorAll('.photo-change,.gphoto label').forEach(el=>el.style.display='none')}}
+load();applyMode();
+</script>
+</body></html>
