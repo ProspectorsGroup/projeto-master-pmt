@@ -93,3 +93,6 @@ V4.2.8 - Correção WhatsApp: botão passa a usar diretamente o link oficial htt
 
 
 V4.2.14 — Correção funcional do botão FALAR PELO WHATSAPP para Google Sites: abertura em nova aba, fora do iframe. Layout V4.2.13 preservado sem alterações visuais.
+
+
+V4.2.16 — ajuste automático de escala no modo publicação em celular para evitar corte inferior no iframe do Google Sites. Vídeo, Google Maps, WhatsApp e QR Code preservados.
