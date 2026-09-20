@@ -53,7 +53,7 @@ const DEF={
  address:'Av São Luís, 200\nCentro – São Paulo/SP',delivery:'Dezembro/2026',area:'78 m² a 142 m²',type:'Apartamentos',parking:'1 a 2 vagas',price:'R$ 6.000.000',
  highlightsTitle:'DESTAQUES DO PROJETO',description:'Um projeto exclusivo que combina arquitetura contemporânea, plantas inteligentes e infraestrutura completa de lazer. Tudo pensado para oferecer bem-estar, praticidade e valorização.',
  f1:'Localização privilegiada',f2:'Plantas amplas e bem distribuídas',f3:'Acabamentos de alto padrão',f4:'Infraestrutura completa de lazer',f5:'Segurança e privacidade',f6:'Projeto contemporâneo',f7:'Excelente opção para morar ou investir',f8:'Sofisticação e bem viver',
- contactName:'RICK PALMIERI',contactRole:'Corretor de Imóveis',creci:'312399',whatsapp:'5511985501019',whatsappDisplay:'+55 11 98550-1019',email:'prospectors.imoveis@gmail.com',
+ contactName:'RICK PALMIERI',contactRole:'Corretor de Imóveis',creci:'312399',whatsapp:'5511919186593',whatsappDisplay:'+55 11 91918-6593',email:'prospectors.imoveis@gmail.com',
  whatsappMessage:'Olá, vim pelo QR CODE e gostaria de mais informações. Aguardo seu retorno!',mapUrl:'',videoUrl:'https://www.youtube.com/shorts/tsZPxL8ZDL0'
 };
 function key(k){return 'pmt_'+k}
@@ -62,17 +62,22 @@ function html(v){return String(v??'').replace(/\n/g,'<br>')}
 function textOf(el){return (el.innerText||'').trim()}
 function normalizePhone(v){let d=String(v||'').replace(/\D/g,'');if((d.length===10||d.length===11)&&!d.startsWith('55'))d='55'+d;return d}
 function formatPhone(v){let d=normalizePhone(v);let m=d.match(/^55(\d{2})(\d{4,5})(\d{4})$/);return m?'+55 '+m[1]+' '+m[2]+'-'+m[3]:v}
-function waData(){const phone=normalizePhone(localStorage.getItem(key('whatsapp'))||textOf(document.querySelector('[data-k="whatsappDisplay"]'))||DEF.whatsapp);const msg=localStorage.getItem(key('whatsappMessage'))||DEF.whatsappMessage;return {phone,msg}}
+function waData(){
+ const stored=localStorage.getItem(key('whatsapp'));
+ const visible=localStorage.getItem(key('whatsappDisplay'));
+ const phone=normalizePhone(stored!==null?stored:(visible!==null?visible:DEF.whatsapp));
+ const savedMessage=localStorage.getItem(key('whatsappMessage'));
+ return {phone,msg:savedMessage===null?DEF.whatsappMessage:savedMessage};
+}
 function waUrl(){const {phone,msg}=waData();return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg)}
-function isMobile(){return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)}
-function waButtonUrl(){const {phone,msg}=waData();return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg)}
 function refreshContact(){
- const raw=localStorage.getItem(key('whatsapp'))||normalizePhone(textOf(document.querySelector('[data-k="whatsappDisplay"]')))||DEF.whatsapp;
- const url='https://wa.me/'+normalizePhone(raw)+'?text='+encodeURIComponent(localStorage.getItem(key('whatsappMessage'))||DEF.whatsappMessage);
- const display=formatPhone(raw);const d=document.querySelector('[data-k="whatsappDisplay"]');if(d)d.textContent=display;
- const wb=document.getElementById('waBtn');if(wb){wb.href=waButtonUrl();wb.target='_blank';wb.rel='noopener noreferrer';wb.onclick=null;wb.title='Abrir conversa no WhatsApp';}
- const email=textOf(document.querySelector('[data-k="email"]'))||DEF.email;
- const qr=document.getElementById('qrImg');if(qr)qr.src='https://quickchart.io/qr?size=260&margin=1&text='+encodeURIComponent(url);
+ const {phone}=waData();
+ const d=document.querySelector('[data-k="whatsappDisplay"]');
+ if(d && document.activeElement!==d)d.textContent=formatPhone(phone);
+ const wb=document.getElementById('waBtn');
+ if(wb){wb.href=phone.length===13&&phone.startsWith('55')?waUrl():'#';wb.target='_blank';wb.rel='noopener noreferrer';wb.title='Abrir conversa no WhatsApp';}
+ const qr=document.getElementById('qrImg');
+ if(qr)qr.src=phone.length===13&&phone.startsWith('55')?'https://quickchart.io/qr?size=260&margin=1&text='+encodeURIComponent(waUrl()):'';
 }
 function load(){
  document.querySelectorAll('.edit[data-k]').forEach(el=>{let k=el.dataset.k;let v=localStorage.getItem(key(k));if(v===null)v=DEF[k];if(v!==undefined&&v!==null)el.innerHTML=html(v)});
@@ -82,10 +87,32 @@ function load(){
  const vb=document.getElementById('videoBtn');if(vb){vb.href=(localStorage.getItem(key('videoUrl'))||DEF.videoUrl);}
 }
 function saveEditable(){
- document.querySelectorAll('.edit[data-k]').forEach(el=>{let k=el.dataset.k;if(k==='whatsappDisplay'){let p=normalizePhone(textOf(el));localStorage.setItem(key('whatsapp'),p);localStorage.setItem(key(k),formatPhone(p));}else localStorage.setItem(key(k),textOf(el))});
- refreshContact();alert('Alterações salvas neste navegador. O QR Code foi sincronizado com o WhatsApp atual.');
+ const phoneElement=document.querySelector('[data-k="whatsappDisplay"]');
+ const phone=normalizePhone(textOf(phoneElement));
+ if(!/^55\d{11}$/.test(phone)){alert('Informe um WhatsApp brasileiro válido com DDD e 11 dígitos, incluindo o 9 do celular.');phoneElement.focus();return;}
+ document.querySelectorAll('.edit[data-k]').forEach(el=>{
+  const k=el.dataset.k;
+  if(k==='whatsappDisplay'){
+   localStorage.setItem(key('whatsapp'),phone);
+   localStorage.setItem(key(k),formatPhone(phone));
+  }else localStorage.setItem(key(k),textOf(el));
+ });
+ phoneElement.blur();refreshContact();
+ alert('Alterações salvas neste navegador. Link e QR Code atualizados para o telefone exibido. Confirme a abertura no WhatsApp.');
 }
-document.querySelectorAll('.edit[data-k]').forEach(el=>el.addEventListener('input',()=>{if(el.dataset.k==='whatsappDisplay'){localStorage.setItem(key('whatsapp'),normalizePhone(textOf(el)));}else localStorage.setItem(key(el.dataset.k),textOf(el));if(['whatsappDisplay','email'].includes(el.dataset.k))refreshContact()}));
+document.querySelectorAll('.edit[data-k]').forEach(el=>el.addEventListener('input',()=>{
+ if(el.dataset.k==='whatsappDisplay'){
+  const phone=normalizePhone(textOf(el));
+  if(/^55\d{11}$/.test(phone)){
+   localStorage.setItem(key('whatsapp'),phone);
+   localStorage.setItem(key('whatsappDisplay'),formatPhone(phone));
+   refreshContact();
+  }else{
+   const wb=document.getElementById('waBtn');if(wb)wb.removeAttribute('href');
+   const qr=document.getElementById('qrImg');if(qr)qr.removeAttribute('src');
+  }
+ }else localStorage.setItem(key(el.dataset.k),textOf(el));
+}));
 function compress(file,max,quality=.86){return new Promise((resolve,reject)=>{let r=new FileReader();r.onload=()=>{let img=new Image();img.onload=()=>{let ratio=Math.min(1,max/Math.max(img.width,img.height));let c=document.createElement('canvas');c.width=Math.round(img.width*ratio);c.height=Math.round(img.height*ratio);c.getContext('2d').drawImage(img,0,0,c.width,c.height);resolve(c.toDataURL('image/jpeg',quality))};img.onerror=reject;img.src=r.result};r.onerror=reject;r.readAsDataURL(file)})}
 async function changeImage(e,k,id,max){let f=e.target.files&&e.target.files[0];if(!f)return;try{let data=await compress(f,max);localStorage.setItem(key(k),data);document.getElementById(id).src=data}catch(err){alert('Não foi possível carregar a imagem.')};e.target.value=''}
 function safeOpen(raw,label){let u=String(raw||'').trim();if(!u){alert('Cadastre o link de '+label+' na Ficha-Mestre.');return}try{let x=new URL(u);if(!['http:','https:'].includes(x.protocol))throw new Error();window.open(x.href,'_blank','noopener,noreferrer')}catch(e){alert('O link de '+label+' não é válido. Use um endereço começando por https:// ou http://.')}}
