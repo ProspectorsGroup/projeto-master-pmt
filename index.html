@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROSPECTORS — Anúncio Premium V4.2.29 responsivo</title>
+<style>
+:root{--navy:#0b2742;--gold:#c9a34f;--ink:#12243a;--line:#d6dce2;--green:#16a34a}
+*{box-sizing:border-box;border-radius:0!important}
+html,body{margin:0;width:100%;max-width:100%;overflow-x:hidden;background:#e9edf1;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.toolbar{position:sticky;top:0;z-index:30;display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#071b2e;padding:10px 12px}
+.toolbar button,.toolbar a{border:1px solid #587086;background:#12334f;color:#fff;padding:9px 12px;font:700 12px Arial;text-decoration:none;cursor:pointer}
+.toolbar .gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}.toolbar .spacer{flex:1}.toolbar .hint{color:#cbd7e2;font-size:12px}
+.sheet{container-type:inline-size;width:min(1200px,100%);aspect-ratio:16/9;margin:24px auto;background:#fff;border:1px solid #cfd6dc;box-shadow:0 12px 36px #0002;overflow:hidden;display:grid;grid-template-rows:10% 58% 32%}
+.brandbar{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 2.6667cqw;border-bottom:1px solid #274866;min-width:0;overflow:hidden}
+.brand-left{font-size:1.9167cqw;font-weight:700;letter-spacing:.05cqw;white-space:nowrap}.brand-right{font-size:1.1667cqw;letter-spacing:.0333cqw;white-space:nowrap}.edit:focus{outline:2px solid var(--gold);outline-offset:-2px;background:#fffceb;color:var(--ink)}
+.hero{display:grid;grid-template-columns:37% 46% 17%;min-height:0;overflow:hidden;border-bottom:1px solid var(--line)}
+.info{grid-column:1;padding:1.8333cqw 2.3333cqw;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:0;overflow:hidden}
+.kicker{font-size:.8333cqw;letter-spacing:.3333cqw;margin-bottom:.5833cqw}.project{font-size:2.8333cqw;line-height:.95;margin:0 0 .5833cqw;font-weight:800}.builder{font-size:1.4167cqw;font-weight:800;letter-spacing:.25cqw;margin-bottom:.75cqw}.address{font-size:1cqw;line-height:1.35;padding:.5833cqw 0 .75cqw;border-bottom:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:1fr 1fr;min-width:0}.fact{padding:.5833cqw .4167cqw .5833cqw 0;border-bottom:1px solid var(--line);min-width:0}.fact:nth-child(odd){border-right:1px solid var(--line)}.fact:nth-child(even){padding-left:.8333cqw}.fact b{display:block;text-transform:uppercase;font-size:.6667cqw;color:#617184;margin-bottom:.1667cqw}.fact span{font-size:1cqw;font-weight:800}.pricebox{margin-top:.75cqw;border-top:1px solid var(--gold);padding-top:.6667cqw}.price-label{font-size:.75cqw;font-weight:800;color:#59697a}.price-value{font-size:1.75cqw;font-weight:800;color:var(--navy);margin-top:.1667cqw}
+.photo-column{grid-column:2;grid-row:1;position:relative;min-width:0;min-height:0;overflow:hidden;background:#dde3e8;border-right:1px solid var(--line)}
+.mainphoto{position:absolute;inset:0;overflow:hidden}.mainphoto img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.photo-change{position:absolute;left:.8333cqw;bottom:.8333cqw;background:#fff;color:var(--navy);border:1px solid #b7c0c8;padding:.5cqw .6667cqw;font:700 .75cqw Arial;cursor:pointer}.photo-change input{display:none}
+.actions-rail{grid-column:3;grid-row:1;display:grid;grid-template-rows:1fr 1fr;background:#fff;min-width:0;min-height:0;overflow:hidden}.action{border:0;border-bottom:1px solid var(--line);background:#fff;color:var(--navy);font-weight:800;font-size:1cqw;cursor:pointer;padding:1cqw;min-width:0;overflow:hidden}.action:last-child{border-bottom:0}.action .ico{display:block;font-size:2.1667cqw;margin-bottom:.5833cqw;color:var(--gold)}
+.bottom{display:grid;grid-template-columns:37% 63%;min-height:0;overflow:hidden}.gallery{grid-column:1;display:grid;grid-template-columns:1fr 1fr;gap:.6667cqw;padding:1.1667cqw;background:#fff;border-right:1px solid #8293a2;min-width:0;min-height:0;overflow:hidden}.gphoto{position:relative;overflow:hidden;background:#e3e7eb;min-width:0;min-height:0}.gphoto img{width:100%;height:100%;object-fit:cover;display:block}.gphoto label{position:absolute;left:.5cqw;bottom:.5cqw;background:#fff;border:1px solid #bbc3ca;color:var(--navy);padding:.3333cqw .5cqw;font:700 .6667cqw Arial;cursor:pointer}.gphoto input{display:none}
+.contact{grid-column:2;background:var(--navy);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) 15.4167cqw;align-items:center;padding:1.6667cqw 2.1667cqw;min-width:0;min-height:0;overflow:hidden}.broker{min-width:0;overflow:hidden}.broker h3{font-size:2.25cqw;margin:0 0 .3333cqw}.broker .role,.broker .creci{font-size:1.1667cqw;margin-bottom:.25cqw}.contact-meta{margin-top:1.0833cqw;font-size:1.25cqw;line-height:1.7;overflow-wrap:anywhere}.contact-meta a{color:#fff;text-decoration:none}.wa-button{display:inline-flex;align-items:center;justify-content:center;margin-top:1cqw;padding:.75cqw 1.1667cqw;border:1px solid #fff;background:#fff;color:var(--navy);font:800 .9167cqw Arial;text-decoration:none;letter-spacing:.0333cqw;cursor:pointer}.wa-button:hover{background:#eef3f6}.qrbox{border-left:1px solid #7f94a7;padding-left:1.6667cqw;text-align:center;min-width:0}.qrbox .scan{font-size:.8333cqw;letter-spacing:.25cqw;margin-bottom:.5cqw}.qrbox img{width:11.25cqw;height:11.25cqw;background:#fff;padding:.4167cqw;object-fit:contain;max-width:100%}
+.highlights,.contactline,.broker-photo,.map-under-photo,.side-actions,.smallnote{display:none!important}
+.public-mode{background:#fff}.public-mode .sheet{margin:0 auto;box-shadow:none;border:0}.public-mode .edit:focus{outline:none;background:transparent;color:inherit}.public-mode .action{cursor:pointer}.public-mode .photo-change,.public-mode .gphoto label{display:none!important}
+@media(max-width:760px){.toolbar{display:none}.sheet{margin:0;width:100%;max-width:100%;aspect-ratio:16/9}.public-mode .sheet{width:100%;max-width:100%}}
+
+/* V4.2.29: adaptação exclusivamente para telas estreitas; desktop preservado. */
+@media screen and (max-width:760px){
+ html,body{overflow-x:hidden;background:#fff}
+ .sheet,.public-mode .sheet{container-type:normal;display:flex;flex-direction:column;width:100%;max-width:100%;height:auto;aspect-ratio:auto;min-height:0;margin:0 auto;overflow:visible;border:0;box-shadow:none}
+ .brandbar{min-height:64px;padding:14px 18px;gap:10px;overflow:visible}
+ .brand-left{font-size:clamp(16px,4.3vw,22px);letter-spacing:0;white-space:normal}
+ .brand-right{font-size:clamp(10px,2.6vw,13px);letter-spacing:0;white-space:normal;text-align:right}
+ .hero{display:flex;flex-direction:column;overflow:visible;min-height:0;border-bottom:0}
+ .info{order:0;width:100%;padding:24px 20px;display:block;overflow:visible;border-right:0}
+ .kicker{font-size:12px;letter-spacing:3px;margin-bottom:10px}
+ .project{font-size:clamp(30px,8vw,44px);line-height:1.05;margin:0 0 10px;overflow-wrap:anywhere}
+ .builder{font-size:19px;letter-spacing:3px;margin-bottom:14px}
+ .address{font-size:16px;line-height:1.5;padding:10px 0 14px}
+ .fact{padding:12px 8px 12px 0}.fact:nth-child(even){padding-left:12px}
+ .fact b{font-size:11px;margin-bottom:5px}.fact span{font-size:clamp(14px,3.8vw,17px);line-height:1.35;display:block;overflow-wrap:anywhere}
+ .pricebox{margin-top:15px;padding-top:13px}.price-label{font-size:11px}.price-value{font-size:clamp(25px,7vw,34px);margin-top:5px;overflow-wrap:anywhere}
+ .photo-column{order:1;grid-column:auto;grid-row:auto;width:100%;height:auto;aspect-ratio:4/3;min-height:250px;border-right:0;overflow:hidden}
+ .mainphoto{inset:0}.mainphoto img{object-fit:cover}
+ .photo-change{left:12px;bottom:12px;padding:9px 11px;font-size:12px}
+ .actions-rail{order:2;grid-column:auto;grid-row:auto;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;min-height:88px;overflow:visible;border-bottom:1px solid var(--line)}
+ .action{min-height:88px;font-size:clamp(11px,3vw,14px);line-height:1.35;padding:12px 7px;border-right:1px solid var(--line);border-bottom:0}
+ .action .ico{font-size:27px;margin-bottom:6px}.action:last-child{border-right:0}
+ .bottom{display:flex;flex-direction:column;min-height:0;overflow:visible}
+ .gallery{order:0;grid-column:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;min-height:0;overflow:visible;border-right:0}
+ .gphoto{aspect-ratio:4/3;min-height:130px}.gphoto img{object-fit:cover}.gphoto label{left:5px;bottom:5px;padding:5px;font-size:10px}
+ .contact{order:1;grid-column:auto;display:flex;flex-direction:column;align-items:stretch;gap:22px;padding:25px 20px 30px;min-height:0;overflow:visible}
+ .broker{overflow:visible}.broker h3{font-size:clamp(24px,6.5vw,32px);margin:0 0 10px;overflow-wrap:anywhere}
+ .broker .role,.broker .creci{font-size:15px;margin-bottom:5px}
+ .contact-meta{margin-top:15px;font-size:15px;line-height:1.7;overflow-wrap:anywhere}
+ .wa-button{width:100%;min-height:50px;margin-top:18px;padding:14px 10px;font-size:14px;letter-spacing:0;text-align:center}
+ .qrbox{border-left:0;border-top:1px solid #7f94a7;padding:20px 0 0;text-align:center}
+ .qrbox .scan{font-size:12px;letter-spacing:3px;margin-bottom:12px}
+ .qrbox img{width:190px;height:190px;max-width:100%;padding:8px}
+}
+@media print{body{background:#fff}.toolbar{display:none}.sheet{width:100%;margin:0;border:0;box-shadow:none}.photo-change,.gphoto label{display:none}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <a class="gold" href="ficha-mestre.html">EDITAR FICHA-MESTRE</a>
+  <button onclick="window.print()">IMPRIMIR / PDF</button>
+  <button onclick="saveEditable()">SALVAR ALTERAÇÕES DIRETAS</button>
+  <button onclick="resetExample()">RECARREGAR DADOS DA FICHA</button>
+  <a href="index.html?public=1">MODO PUBLICAÇÃO</a><span class="spacer"></span><span class="hint">V4.2.29 • versão responsiva • base estável preservada</span>
+</div>
+<main class="sheet">
+<header class="brandbar"><div class="brand-left edit" contenteditable="true" data-k="brandLeft">PROSPECTORS GROUP</div><div class="brand-right edit" contenteditable="true" data-k="brandRight">Corretores Associados</div></header>
+<section class="hero">
+<aside class="info"><div class="kicker edit" contenteditable="true" data-k="kicker">LANÇAMENTO</div><h1 class="project edit" contenteditable="true" data-k="title">TODAY CENTRO</h1><div class="builder"><span class="edit" contenteditable="true" data-k="builder">CANOPUS</span></div><div class="address edit" contenteditable="true" data-k="address">Av São Luís, 200<br>Centro – São Paulo/SP</div><div class="facts"><div class="fact"><b>Entrega</b><span class="edit" contenteditable="true" data-k="delivery">Dezembro/2026</span></div><div class="fact"><b>Metragens</b><span class="edit" contenteditable="true" data-k="area">78 m² a 142 m²</span></div><div class="fact"><b>Tipologias</b><span class="edit" contenteditable="true" data-k="type">Apartamentos</span></div><div class="fact"><b>Vagas</b><span class="edit" contenteditable="true" data-k="parking">1 a 2 vagas</span></div></div><div class="pricebox"><div class="price-label">PREÇO A PARTIR DE:</div><div class="price-value edit" contenteditable="true" data-k="price">R$ 6.000.000</div></div></aside>
+<div class="photo-column"><div class="mainphoto"><img id="mainImg" src="assets/foto-principal-aprovada.png" alt="Imagem principal"><label class="photo-change">TROCAR FOTO<input type="file" accept="image/*" onchange="changeImage(event,'mainImage','mainImg',1600)"></label></div></div>
+<div class="actions-rail"><a id="videoBtn" class="action" href="https://www.youtube.com/shorts/tsZPxL8ZDL0" target="_blank" rel="noopener noreferrer" style="text-decoration:none;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center"><span class="ico">▷</span>ASSISTA AO VÍDEO</a><button class="action" onclick="openMap()"><span class="ico">⌖</span>VER LOCALIZAÇÃO</button></div>
+</section>
+<section class="bottom"><div class="gallery"><div class="gphoto"><img id="gallery1Img" src="assets/foto-secundaria-1-aprovada.png" alt="Foto 2"><label>TROCAR FOTO 2<input type="file" accept="image/*" onchange="changeImage(event,'gallery1','gallery1Img',1400)"></label></div><div class="gphoto"><img id="gallery2Img" src="assets/foto-secundaria-2-aprovada.png" alt="Foto 3"><label>TROCAR FOTO 3<input type="file" accept="image/*" onchange="changeImage(event,'gallery2','gallery2Img',1400)"></label></div></div><section class="contact"><div class="broker"><h3 class="edit" contenteditable="true" data-k="contactName">RICK PALMIERI</h3><div class="role edit" contenteditable="true" data-k="contactRole">Corretor de Imóveis</div><div class="creci">CRECI <span class="edit" contenteditable="true" data-k="creci">312399</span></div><div class="contact-meta">WhatsApp: <span class="edit" contenteditable="true" data-k="whatsappDisplay">+55 11 98550-1019</span><br>E-mail: <span class="edit" contenteditable="true" data-k="email">prospectors.imoveis@gmail.com</span></div><a id="waBtn" class="wa-button" href="#">FALAR PELO WHATSAPP</a></div><div class="qrbox"><div class="scan">SCAN ME</div><img id="qrImg" alt="QR Code dinâmico"></div></section></section>
+</main>
+<script>
+const DEF={
+ brandLeft:'PROSPECTORS GROUP',brandRight:'Corretores Associados',kicker:'LANÇAMENTO',title:'TODAY CENTRO',builder:'CANOPUS',
+ address:'Av São Luís, 200\nCentro – São Paulo/SP',delivery:'Dezembro/2026',area:'78 m² a 142 m²',type:'Apartamentos',parking:'1 a 2 vagas',price:'R$ 6.000.000',
+ highlightsTitle:'DESTAQUES DO PROJETO',description:'Um projeto exclusivo que combina arquitetura contemporânea, plantas inteligentes e infraestrutura completa de lazer. Tudo pensado para oferecer bem-estar, praticidade e valorização.',
+ f1:'Localização privilegiada',f2:'Plantas amplas e bem distribuídas',f3:'Acabamentos de alto padrão',f4:'Infraestrutura completa de lazer',f5:'Segurança e privacidade',f6:'Projeto contemporâneo',f7:'Excelente opção para morar ou investir',f8:'Sofisticação e bem viver',
+ contactName:'RICK PALMIERI',contactRole:'Corretor de Imóveis',creci:'312399',whatsapp:'5511919186593',whatsappDisplay:'+55 11 91918-6593',email:'prospectors.imoveis@gmail.com',
+ whatsappMessage:'Olá, vim pelo QR CODE e gostaria de mais informações. Aguardo seu retorno!',mapUrl:'',videoUrl:'https://www.youtube.com/shorts/tsZPxL8ZDL0'
+};
+function key(k){return 'pmt_'+k}
+function ls(k){let v=localStorage.getItem(key(k));return v===null?DEF[k]:v}
+function html(v){return String(v??'').replace(/\n/g,'<br>')}
+function textOf(el){return (el.innerText||'').trim()}
+function normalizePhone(v){let d=String(v||'').replace(/\D/g,'');if((d.length===10||d.length===11)&&!d.startsWith('55'))d='55'+d;return d}
+function formatPhone(v){let d=normalizePhone(v);let m=d.match(/^55(\d{2})(\d{4,5})(\d{4})$/);return m?'+55 '+m[1]+' '+m[2]+'-'+m[3]:v}
+function waData(){
+ const stored=localStorage.getItem(key('whatsapp'));
+ const visible=localStorage.getItem(key('whatsappDisplay'));
+ const phone=normalizePhone(stored!==null?stored:(visible!==null?visible:DEF.whatsapp));
+ const savedMessage=localStorage.getItem(key('whatsappMessage'));
+ return {phone,msg:savedMessage===null?DEF.whatsappMessage:savedMessage};
+}
+function waUrl(){const {phone,msg}=waData();return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg)}
+function refreshContact(){
+ const {phone}=waData();
+ const d=document.querySelector('[data-k="whatsappDisplay"]');
+ if(d && document.activeElement!==d)d.textContent=formatPhone(phone);
+ const wb=document.getElementById('waBtn');
+ if(wb){wb.href=phone.length===13&&phone.startsWith('55')?waUrl():'#';wb.target='_blank';wb.rel='noopener noreferrer';wb.title='Abrir conversa no WhatsApp';}
+ const qr=document.getElementById('qrImg');
+ if(qr)qr.src=phone.length===13&&phone.startsWith('55')?'https://quickchart.io/qr?size=260&margin=1&text='+encodeURIComponent(waUrl()):'';
+}
+function load(){
+ document.querySelectorAll('.edit[data-k]').forEach(el=>{let k=el.dataset.k;let v=localStorage.getItem(key(k));if(v===null)v=DEF[k];if(v!==undefined&&v!==null)el.innerHTML=html(v)});
+ const wa=localStorage.getItem(key('whatsapp'));if(wa){let d=document.querySelector('[data-k="whatsappDisplay"]');if(d)d.textContent=formatPhone(wa)}
+ [['mainImage','mainImg'],['gallery1','gallery1Img'],['gallery2','gallery2Img'],['brokerImage','brokerImg']].forEach(([k,id])=>{let v=localStorage.getItem(key(k));if(v&&document.getElementById(id))document.getElementById(id).src=v});
+ refreshContact();
+ const vb=document.getElementById('videoBtn');if(vb){vb.href=(localStorage.getItem(key('videoUrl'))||DEF.videoUrl);}
+}
+function saveEditable(){
+ const phoneElement=document.querySelector('[data-k="whatsappDisplay"]');
+ const phone=normalizePhone(textOf(phoneElement));
+ if(!/^55\d{11}$/.test(phone)){alert('Informe um WhatsApp brasileiro válido com DDD e 11 dígitos, incluindo o 9 do celular.');phoneElement.focus();return;}
+ document.querySelectorAll('.edit[data-k]').forEach(el=>{
+  const k=el.dataset.k;
+  if(k==='whatsappDisplay'){
+   localStorage.setItem(key('whatsapp'),phone);
+   localStorage.setItem(key(k),formatPhone(phone));
+  }else localStorage.setItem(key(k),textOf(el));
+ });
+ phoneElement.blur();refreshContact();
+ alert('Alterações salvas neste navegador. Link e QR Code atualizados para o telefone exibido. Confirme a abertura no WhatsApp.');
+}
+document.querySelectorAll('.edit[data-k]').forEach(el=>el.addEventListener('input',()=>{
+ if(el.dataset.k==='whatsappDisplay'){
+  const phone=normalizePhone(textOf(el));
+  if(/^55\d{11}$/.test(phone)){
+   localStorage.setItem(key('whatsapp'),phone);
+   localStorage.setItem(key('whatsappDisplay'),formatPhone(phone));
+   refreshContact();
+  }else{
+   const wb=document.getElementById('waBtn');if(wb)wb.removeAttribute('href');
+   const qr=document.getElementById('qrImg');if(qr)qr.removeAttribute('src');
+  }
+ }else localStorage.setItem(key(el.dataset.k),textOf(el));
+}));
+function compress(file,max,quality=.86){return new Promise((resolve,reject)=>{let r=new FileReader();r.onload=()=>{let img=new Image();img.onload=()=>{let ratio=Math.min(1,max/Math.max(img.width,img.height));let c=document.createElement('canvas');c.width=Math.round(img.width*ratio);c.height=Math.round(img.height*ratio);c.getContext('2d').drawImage(img,0,0,c.width,c.height);resolve(c.toDataURL('image/jpeg',quality))};img.onerror=reject;img.src=r.result};r.onerror=reject;r.readAsDataURL(file)})}
+async function changeImage(e,k,id,max){let f=e.target.files&&e.target.files[0];if(!f)return;try{let data=await compress(f,max);localStorage.setItem(key(k),data);document.getElementById(id).src=data}catch(err){alert('Não foi possível carregar a imagem.')};e.target.value=''}
+function safeOpen(raw,label){let u=String(raw||'').trim();if(!u){alert('Cadastre o link de '+label+' na Ficha-Mestre.');return}try{let x=new URL(u);if(!['http:','https:'].includes(x.protocol))throw new Error();window.open(x.href,'_blank','noopener,noreferrer')}catch(e){alert('O link de '+label+' não é válido. Use um endereço começando por https:// ou http://.')}}
+function openVideo(){const u=(localStorage.getItem(key('videoUrl'))||DEF.videoUrl||'').trim();safeOpen(u,'vídeo')}
+function openMap(){const address=(localStorage.getItem(key('address'))||DEF.address||'').trim();if(!address){alert('Cadastre o endereço do imóvel na Ficha-Mestre.');return}const url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(address);window.open(url,'_blank','noopener,noreferrer')}
+function resetExample(){load();alert('Dados recarregados da Ficha-Mestre / armazenamento deste navegador.')}
+function applyMode(){const q=new URLSearchParams(location.search);if(q.get('public')==='1'){document.body.classList.add('public-mode');document.querySelector('.toolbar')?.remove();document.querySelectorAll('[contenteditable="true"]').forEach(el=>el.setAttribute('contenteditable','false'));document.querySelectorAll('.photo-change,.gphoto label').forEach(el=>el.style.display='none')}}
+load();applyMode();
+</script>
+</body></html>
